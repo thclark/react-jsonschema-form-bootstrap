@@ -1,0 +1,80 @@
+{
+  "_from": "https://api.github.com/repos/MatejMazur/react-jsonschema-form-bootstrap/tarball/master",
+  "_id": "react-jsonschema-form-bootstrap@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha512-KIQyatkJT2SnCMtyHFegDRZlyztsIWU3EkuomghoA9QBGHhLPL7tue2AuCU7wvQ79HekAXkZktt92BSy+FMb5Q==",
+  "_location": "/react-jsonschema-form-bootstrap",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "react-jsonschema-form-bootstrap@https://api.github.com/repos/MatejMazur/react-jsonschema-form-bootstrap/tarball/master",
+    "name": "react-jsonschema-form-bootstrap",
+    "escapedName": "react-jsonschema-form-bootstrap",
+    "rawSpec": "https://api.github.com/repos/MatejMazur/react-jsonschema-form-bootstrap/tarball/master",
+    "saveSpec": "https://api.github.com/repos/MatejMazur/react-jsonschema-form-bootstrap/tarball/master",
+    "fetchSpec": "https://api.github.com/repos/MatejMazur/react-jsonschema-form-bootstrap/tarball/master"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://api.github.com/repos/MatejMazur/react-jsonschema-form-bootstrap/tarball/master",
+  "_spec": "react-jsonschema-form-bootstrap@https://api.github.com/repos/MatejMazur/react-jsonschema-form-bootstrap/tarball/master",
+  "_where": "/Users/thc29/Source/octue/amy/planex",
+  "author": {
+    "name": "Matej Mazur",
+    "email": "matej.mazur@mail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/MatejMazur/react-jsonschema-form-bootstrap/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Bootstrap UI for React JSON Schema Form library",
+  "devDependencies": {
+    "@neutrinojs/library": "^8.2.3",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-react-app": "^3.1.1",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.1.6",
+    "eslint": "^4.19.1",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-react": "^7.8.2",
+    "husky": "^1.0.0-rc.8",
+    "lint-staged": "^7.1.3",
+    "neutrino": "^8.2.3",
+    "prettier-eslint-cli": "^4.7.1",
+    "react": "15.6.2",
+    "react-dom": "^15.0.0",
+    "react-jsonschema-form": "git+https://github.com/MatejMazur/react-jsonschema-form.git#ui-agnostic",
+    "svgr": "^1.10.0"
+  },
+  "homepage": "https://github.com/MatejMazur/react-jsonschema-form-bootstrap#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "{playground,src,test}/**/*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "main": "build/index.js",
+  "module": "lib/index.js",
+  "name": "react-jsonschema-form-bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatejMazur/react-jsonschema-form-bootstrap.git"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:umd",
+    "build:lib": "cross-env NODE_ENV=production babel src --out-dir lib",
+    "build:umd": "neutrino build",
+    "icons": "svgr -d src/components/icons svg --icon",
+    "start": "cross-env NODE_ENV=development babel src --out-dir lib --watch"
+  },
+  "version": "1.0.0"
+}
